@@ -1,0 +1,15 @@
+@import "./variables";
+
+@mixin box($dp,$width ,$bg){
+    display: $dp;
+    width: $width;
+    background: $bg;
+}
+
+.box{
+    @include box(flex,200px ,#d68910 )
+}
+
+.box-two{
+    @include box(inline-block,500px , #e74c3c)
+}

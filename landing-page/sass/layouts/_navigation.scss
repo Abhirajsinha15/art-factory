@@ -1,0 +1,54 @@
+nav {
+    .container-fluid    {
+        min-height: 5rem;
+        background: url(/landing-page/images/banner-bg.png) 0 0 no-repeat;
+        background-size: cover;
+        padding: 0 12rem;
+
+
+    
+    }
+
+    .nav-item {
+        margin: 0 1.5rem;
+        position: relative;
+        .nav-link{
+            &:hover{
+                color: $explore-btn-bg;
+            }
+        }
+
+    }
+
+    #drop {
+        position: relative;
+        background: red;
+        &:hover {
+            color: #fff;
+            .drop-links {
+                display: inline-block;
+            }
+        }
+    }
+    
+    .drop-links {
+        display: none;
+        background: black;
+        position: absolute;
+        top: calc(100% + 1rem); 
+        right: 0;
+        width: 10rem;
+        transform: translateX(4.6rem);
+
+        #drop:hover &,
+        &:hover {
+            display: inline-block;
+        }
+        
+
+        .sub-nav-link{
+            margin: 1.5rem 1.1rem;
+        }
+    }
+    
+}

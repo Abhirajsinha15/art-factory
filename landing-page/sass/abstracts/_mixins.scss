@@ -1,0 +1,8 @@
+@mixin common-btn($wide , $pad ,$boradius,$bg ,$cl){
+    min-width: $wide;
+    padding: $pad;
+    border-radius: $boradius;
+    background: $bg;
+    color: $cl;
+
+}

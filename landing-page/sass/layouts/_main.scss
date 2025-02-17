@@ -1,0 +1,23 @@
+
+.hero{
+    background: url(/landing-page/images/banner-bg.png) px-to-rem(10px) px-to-rem(-140px) no-repeat;
+    background-size: cover;
+    min-height: 40rem;
+    margin: 0 0.5rem 0 0.06rem;
+
+    .container{
+        padding: 3rem 0;
+        .text-area{
+            padding: 0 3rem;
+           
+        }
+        .img-area{
+            position: relative;
+            figure{
+                position: absolute;
+                top :px-to-rem(-94px);
+            
+            }
+        }
+    }
+}

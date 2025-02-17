@@ -1,0 +1,39 @@
+.navbar-brand {
+  color: $secondary-text-color;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  &:focus {
+    text-decoration: none;
+    color: $secondary-text-color;
+  }
+}
+
+.navbar-nav {
+  .nav-item {
+    .nav-link {
+      color: $secondary-text-color;
+      font-size: px-to-rem(16px);
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.hero{
+  .text-area{
+    color: $secondary-text-color;
+  
+    h1{
+      font-size: px-to-rem(64px);
+      font-weight: 400;
+      line-height: px-to-rem(75px);
+    }
+    p{
+      margin: 3rem 0;
+      line-height: px-to-rem(30px);
+      font-size: px-to-rem(19px);
+    }
+  }
+}
