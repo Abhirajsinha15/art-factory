@@ -1,8 +1,9 @@
-@mixin common-btn($wide , $pad ,$boradius,$bg ,$cl){
+@mixin common-btn($wide , $pad ,$boradius,$bg ,$cl ,$textCase){
     min-width: $wide;
     padding: $pad;
     border-radius: $boradius;
     background: $bg;
     color: $cl;
+    text-transform: $textCase;
 
 }

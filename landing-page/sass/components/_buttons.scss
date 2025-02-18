@@ -2,7 +2,17 @@
     .row{
         .text-area{
             .find-out-btn{
-                @include common-btn(30% , px-to-rem(10px) , px-to-rem(25px) , $explore-btn-bg ,$secondary-text-color )
+                @include common-btn(30% , px-to-rem(10px) , px-to-rem(25px) , $explore-btn-bg ,$secondary-text-color , uppercase )
+            }
+        }
+    }
+}
+
+.about{
+    .row{
+        .text-area{
+            .discover-btn{
+                @include common-btn(30% , px-to-rem(10px) , px-to-rem(25px) , $var-teritory-bg ,$secondary-text-color , uppercase )
             }
         }
     }
