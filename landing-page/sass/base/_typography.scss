@@ -21,19 +21,48 @@
   }
 }
 
-.hero{
-  .text-area{
+.hero {
+  .text-area {
     color: $secondary-text-color;
-  
-    h1{
+
+    h1 {
       font-size: px-to-rem(64px);
       font-weight: 400;
       line-height: px-to-rem(75px);
     }
-    p{
-      margin: 3rem 0;
+    p {
+      
       line-height: px-to-rem(30px);
       font-size: px-to-rem(19px);
+      
+    }
+  }
+}
+
+.about {
+  .row {
+    .text-area {
+      p {
+        font-size: px-to-rem(21px);
+        line-height: px-to-rem(35px);
+        color: $para-color;
+      }
+    }
+  }
+}
+
+.features {
+  .row {
+    .text-area {
+      p {
+        line-height: px-to-rem(30px);
+        color: $para-color;
+      }
+      .list{
+        h6{
+          font-size: px-to-rem(21px);
+        }
+      }
     }
   }
 }
