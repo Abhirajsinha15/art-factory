@@ -1,0 +1,14 @@
+.card {
+  border-radius: 0;
+
+  .img-area {
+    figure {
+      background: $var-primary-bg;
+      padding: 20px;
+      border-radius: 50%;
+    }
+  }
+  .text-area {
+    margin: px-to-rem( 25px);
+  }
+}

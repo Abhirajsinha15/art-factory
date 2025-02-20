@@ -1,0 +1,21 @@
+
+
+
+$font-size: ("mobile": 16px ,"tablet": 20px,"desktop": 70px );
+
+
+$theme-colors: (
+  primary: #3498db,
+  secondary: #2ecc71,
+  danger: #e74c3c
+);
+
+$new-colors: (warning: #f39c12);
+
+$combined-colors:map-merge($theme-colors, $new-colors );
+
+.btn {
+  background-color: map-get($combined-colors, warning);  
+}
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <style type="text/css">
+        canvas{
+            border: 1px solid;
+        }
+        body{
+            margin: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <canvas id="canva"></canvas>
+  </body>
+  <script>
+    const canvas = document.querySelector("#canva")
+    var c = canvas.getContext('2d')
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // c.fillRect(x, y, width , height)
+
+    c.fillRect(100, 100, 100 , 100)
+    c.fillRect(500, 100, 100 , 100)
+    c.fillRect(900, 100, 100 , 100)
+    c.fillRect(800, 200, 800 , 100)
+  </script>
+</html>

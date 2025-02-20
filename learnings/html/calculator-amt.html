@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Amount Calculator</title>
+    <style>
+        /* Style for the form and modal */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            margin-right: 10px;
+        }
+        input[type="text"], input[type="number"], select {
+            padding: 8px;
+            margin: 10px 0;
+            width: 220px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+        }
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            float: right;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #finalOutput {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>State Amount Calculator</h2>
+
+<form id="calculatorForm">
+    <label for="state">State:</label>
+    <select id="state" name="state">
+        <option value="delhi">Delhi</option>
+        <option value="jaipur">Jaipur</option>
+        
+    </select>
+    <br>
+    
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" required>
+    <br>
+    
+    <button type="button" onclick="calculateAmount()">Calculate</button>
+</form>
+
+<!-- Modal -->
+<div id="resultModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="calculatedAmount"></p>
+        <button onclick="viewFinalOutput()">View Output</button>
+    </div>
+</div>
+
+<div id="finalOutput"></div>
+
+<!-- <script>
+    let calculatedAmount = 0;
+
+    function calculateAmount() {
+        const state = document.getElementById('state').value;
+        const amount = parseFloat(document.getElementById('amount').value);
+        let multiplier = 1;
+
+        // Custom multiplier logic for Delhi
+        if (state === 'delhi') {
+            if (amount >= 1 && amount <= 5) {
+                multiplier = 0.5;
+            } else if (amount > 5 && amount <= 10) {
+                multiplier = 1;
+            } else if (amount >= 15 && amount <= 20) {
+                multiplier = 2;
+            } else {
+                multiplier = 1; // Default multiplier if none of the above ranges match
+            }
+        } 
+        // Multiplier logic for other states
+        else if (state === 'jaipur' || state === 'jaipur') {
+            multiplier = 3;
+        } 
+
+        calculatedAmount = amount * multiplier;
+
+        // Show the result in the modal
+        document.getElementById('calculatedAmount').textContent = `Calculated Amount: ₹${calculatedAmount}`;
+        document.getElementById('resultModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('resultModal').style.display = 'none';
+    }
+
+    function viewFinalOutput() {
+        document.getElementById('finalOutput').textContent = `The final calculated amount is ₹${calculatedAmount}`;
+        closeModal();
+    }
+</script> -->
+
+<!-- <script>
+    let calculatedIncrease = 0;
+
+    function calculateAmount() {
+        const state = document.getElementById('state').value;
+        const amount = parseInt(document.getElementById('amount').value);
+        let increase = 0;
+
+        if (state === 'delhi') {
+            if (amount < 1 || amount > 400000) {
+                alert('Please enter an amount between 1 and 400000.');
+                return;
+            }
+
+            // Calculate the interval index (1-5, 6-10, 11-15,...)
+            const interval = Math.floor((amount - 1) / 5);
+            
+            // Base increase starts at 0.5 and increases by 0.5 each interval
+            increase = (interval + 1) * 0.5;
+        }
+
+        calculatedIncrease = increase;
+
+        // Display the increase in the modal
+        document.getElementById('calculatedAmount').textContent = `Increase Amount: ₹${calculatedIncrease}`;
+        document.getElementById('resultModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('resultModal').style.display = 'none';
+    }
+
+    function viewFinalOutput() {
+        document.getElementById('finalOutput').textContent = `The calculated increase amount is ₹${calculatedIncrease}`;
+        closeModal();
+    }
+</script> -->
+
+<script>
+    let calculatedIncrease = 0;
+
+    function calculateAmount() {
+        const state = document.getElementById('state').value;
+        const amount = parseInt(document.getElementById('amount').value);
+        let increase = 0;
+
+        if (state === 'delhi') {
+            if (amount < 1 || amount > 400000) {
+                alert('Please enter an amount between 1 and 400000.');
+                return;
+            }
+
+            if (amount <= 100) {
+                // 0.5 increase per 5 units (1-100)
+                const interval = Math.floor((amount - 1) / 5);
+                increase = (interval + 1) * 0.5;
+            } else {
+                // 1 increase per 5 units (above 100)
+                const intervalBelow100 = 100 / 5;  // Total intervals before 100
+                const intervalAbove100 = Math.floor((amount - 101) / 5) + 1;
+                increase = (intervalBelow100 * 0.5) + (intervalAbove100 * 1);
+            }
+        }
+
+        calculatedIncrease = increase;
+
+        // Display the increase in the modal
+        document.getElementById('calculatedAmount').textContent = `Increase Amount: ₹${calculatedIncrease}`;
+        document.getElementById('resultModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('resultModal').style.display = 'none';
+    }
+
+    function viewFinalOutput() {
+        document.getElementById('finalOutput').textContent = `The calculated increase amount is ₹${calculatedIncrease}`;
+        closeModal();
+    }
+</script>
+
+
+</body>
+</html>

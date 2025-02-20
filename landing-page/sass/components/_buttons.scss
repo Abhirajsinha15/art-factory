@@ -1,3 +1,10 @@
+.discover-btn{
+    @include common-btn(30% , px-to-rem(10px) , px-to-rem(25px) , $var-secondary-bg ,$secondary-text-color , uppercase );
+    &:hover{
+        background : $var-teritory-bg
+    }
+}
+
 .hero{
     .row{
         .text-area{
@@ -14,12 +21,22 @@
 .about{
     .row{
         .text-area{
-            .discover-btn{
-                @include common-btn(30% , px-to-rem(10px) , px-to-rem(25px) , $var-secondary-bg ,$secondary-text-color , uppercase );
-                &:hover{
-                    background : $var-teritory-bg
-                }
+           button{
+            @extend .discover-btn;
+        
+           }
+        }
+    }
+}
+.services{
+    .card{
+        .text-area{
+           button{
+            @extend .discover-btn;
+            &:hover{
+                color: $secondary-text-color
             }
+           }
         }
     }
 }
