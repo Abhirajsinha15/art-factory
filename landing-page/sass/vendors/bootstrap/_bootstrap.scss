@@ -13,3 +13,49 @@
     
     
 }
+
+
+.accordion-area{
+    .accordion{
+        
+        .accordion-button::after {
+            display: none !important;
+          }
+        button{
+            background: darken(#f7f7f7 , 5%) ;
+            margin: px-to-rem(10px 0);
+            display: flex;
+            justify-content: space-between;
+            &:focus,
+            &:active {
+                outline: none;
+                box-shadow: none;          
+            }
+            .icon i {
+                transition: transform 0.3s ease-in-out;
+                transform: rotate(0deg);
+              }
+            
+              &.collapsed .icon i {
+                transform: rotate(0deg);
+              }
+            
+              &:not(.collapsed) .icon i {
+                transform: rotate(90deg); 
+              }
+            
+            
+            
+        }
+
+
+          
+      .accordion-item{
+        background: darken(#f7f7f7 , 1%) ;
+        border: 0;
+       &:hover{
+        border: 0;
+       } 
+      }
+    }
+  }

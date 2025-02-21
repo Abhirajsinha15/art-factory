@@ -1,42 +1,60 @@
-.discover-btn{
-    @include common-btn(30% , px-to-rem(10px) , px-to-rem(25px) , $var-secondary-bg ,$secondary-text-color , uppercase );
-    &:hover{
-        background : $var-teritory-bg
-    }
+.discover-btn {
+  @include common-btn(
+    30%,
+    px-to-rem(10px),
+    px-to-rem(25px),
+    $var-secondary-bg,
+    $secondary-text-color,
+    uppercase
+  );
+  &:hover {
+    background: $var-teritory-bg;
+  }
 }
 
-.hero{
-    .row{
-        .text-area{
-            .find-out-btn{
-                @include common-btn(30% , px-to-rem(10px) , px-to-rem(25px) , $explore-btn-bg ,$secondary-text-color , uppercase );
-                &:hover{
-                    background: $var-teritory-bg    
-                }
-            }
+.hero {
+  .row {
+    .text-area {
+      .find-out-btn {
+        @include common-btn(
+          30%,
+          px-to-rem(10px),
+          px-to-rem(25px),
+          $explore-btn-bg,
+          $secondary-text-color,
+          uppercase
+        );
+        &:hover {
+          background: $var-teritory-bg;
         }
+      }
     }
+  }
 }
 
-.about{
-    .row{
-        .text-area{
-           button{
-            @extend .discover-btn;
-        
-           }
-        }
+.about {
+  .row {
+    .text-area {
+      button {
+        @extend .discover-btn;
+      }
     }
+  }
 }
-.services{
-    .card{
-        .text-area{
-           button{
-            @extend .discover-btn;
-            &:hover{
-                color: $secondary-text-color
-            }
-           }
+.services {
+  .card {
+
+    &:hover {
+        figure{
+            background: $var-teritory-bg    
         }
+        button{
+            background: $var-teritory-bg
+        }
+          }
+    button {
+      @extend .discover-btn;
+    
     }
+  }
 }

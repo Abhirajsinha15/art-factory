@@ -44,8 +44,8 @@
   padding: px-to-rem(120px 0);
   .features-head-content {
     padding: px-to-rem(0 60px);
-    p{
-        margin: px-to-rem(20px 0 );
+    p {
+      margin: px-to-rem(20px 0);
     }
   }
   .list {
@@ -53,23 +53,57 @@
       margin: px-to-rem(10px);
       .row {
         width: 80%;
-        .text-col{
-            padding: 0;
+        .text-col {
+          padding: 0;
         }
         p {
           margin: px-to-rem(20px 0);
         }
-        img{
-            display: inline;
-            width: 80%;
+        img {
+          display: inline;
+          width: 80%;
         }
       }
     }
   }
 }
 
-.services{
+.services {
   padding: px-to-rem(120px 0);
   margin: px-to-rem(0 20px);
   background: $var-primary-bg;
+}
+
+.faq {
+  padding: px-to-rem(120px 0);
+  .faq-head {
+    width: 50%;
+    margin: 0 auto 8rem;
+    p {
+      margin: px-to-rem(40px 0 0);
+    }
+  }
+  .text-area {
+    .content {
+      margin: px-to-rem(40px 0);
+    }
+    span {
+      display: block;
+      margin: px-to-rem(0 0 20px);
+    }
+  }
+}
+
+.map {
+  // display: none;
+
+  background: $var-primary-bg;
+  padding: 0;
+  .container-fluid{
+    padding: 0 0 0 10px;
+    iframe {
+      // display: none;
+      height: 40rem;
+    }
+  }
 }
