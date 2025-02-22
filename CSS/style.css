@@ -80,6 +80,11 @@
   color: #0088E8;
 }
 
+.footer .social-media li a {
+  color: #fff;
+  font-size: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -95,6 +100,18 @@ ul, ol {
   list-style: none;
 }
 
+.find-out-btn, .map .row .form-area .send, .hero .row .text-area .find-out-btn {
+  min-width: 10%;
+  padding: 0.625rem 1.25rem;
+  border-radius: 1.5625rem;
+  background: #F55858;
+  color: #fff;
+  text-transform: uppercase;
+}
+.find-out-btn:hover, .map .row .form-area .send:hover, .hero .row .text-area .find-out-btn:hover {
+  background: #0088E8;
+}
+
 .discover-btn, .services .card button, .about .row .text-area button {
   min-width: 30%;
   padding: 0.625rem;
@@ -107,34 +124,54 @@ ul, ol {
   background: #0088E8;
 }
 
-.hero .row .text-area .find-out-btn {
-  min-width: 30%;
-  padding: 0.625rem;
-  border-radius: 1.5625rem;
-  background: #F55858;
-  color: #fff;
-  text-transform: uppercase;
-}
-.hero .row .text-area .find-out-btn:hover {
-  background: #0088E8;
-}
-
-.services .card:hover figure {
-  background: #0088E8;
-}
-.services .card:hover button {
-  background: #0088E8;
-}
-.card {
+.card, .services .card {
   border-radius: 0;
 }
 .card .img-area figure {
   background: #009DD7;
-  padding: 20px;
+  padding: 1.25rem;
   border-radius: 50%;
 }
 .card .text-area {
   margin: 1.5625rem;
+}
+.card:hover figure {
+  background: #0088E8;
+}
+.card:hover button {
+  background: #0088E8;
+}
+
+form {
+  width: 100%;
+  padding: 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+form .input-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: "row";
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 37.5rem;
+}
+form input {
+  padding: 1.25rem;
+  width: 50%;
+  border: 0;
+}
+form #message {
+  max-width: 38.75rem;
+  min-width: 18.75rem;
+  height: 9.375rem;
+  margin: 1.25rem 0;
+  width: 77%;
+  border: 0;
+  padding: 1.25rem;
 }
 
 nav .container-fluid {
@@ -244,7 +281,6 @@ nav .drop-links .sub-nav-link {
   margin: 0 1.25rem;
   background: #009DD7;
 }
-
 .faq {
   padding: 7.5rem 0;
 }
@@ -267,16 +303,42 @@ nav .drop-links .sub-nav-link {
   background: #009DD7;
   padding: 0;
 }
-.map .container-fluid {
-  padding: 0 0 0 10px;
-}
-.map .container-fluid iframe {
+.map .map-area iframe {
+  padding: 0;
   height: 40rem;
+}
+.map .form-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: "row";
+}
+
+.footer {
+  padding: 2.5rem 0;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: "row";
+}
+.footer .container .social-media {
+  display: flex;
+}
+.footer .container .social-media li {
+  background: #00A3D4;
+  padding: 15px 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+.footer .container .social-media li:hover {
+  background: #0088E8;
 }
 
 .navbar {
   --bs-navbar-padding-y: 0;
-  margin: 0.5rem 0.438rem 0 0.688rem;
+  margin: 0.5rem 0.443rem 0 0.688rem;
 }
 .navbar .dropdown:hover .dropdown-menu {
   display: block;
@@ -312,6 +374,12 @@ nav .drop-links .sub-nav-link {
 }
 .accordion-area .accordion .accordion-item:hover {
   border: 0;
+}
+
+.map .container {
+  max-width: 111rem;
+  padding: 0;
+  margin: 0;
 }
 
 .service {

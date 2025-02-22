@@ -654,7 +654,7 @@
       </section>
       <!---------------------------------------------------- Map-section ------------------------------------------------------------------>
       <section class="map">
-        <div class="container-fluid">
+        <div class="container">
           <div class="row">
             <div class="col-md-12 col-lg-6 col-xl-6 map-area">
               <div id="map">
@@ -672,14 +672,43 @@
               </div>
             </div>
             <div class="col-md-12 col-lg-6 col-xl-6 form-area">
-  
+              <form action="">
+                <div class="input-container">
+                  <input
+                    type="text"
+                    name=""
+                    id="full-name"
+                    placeholder="Full Name"
+                  />
+                  <input type="text" name="" id="e-mail" placeholder="Email" />
+                </div>
+
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Your message"
+                ></textarea>
+                <button class="btn send">Send it</button>
+              </form>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <p>Copyright © 2020 Art Factory Company . Design: <a href="#">TemplateMo</a> </p>
+          <ul class="social-media">
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {

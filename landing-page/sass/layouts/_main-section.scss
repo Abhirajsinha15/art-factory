@@ -72,6 +72,9 @@
   padding: px-to-rem(120px 0);
   margin: px-to-rem(0 20px);
   background: $var-primary-bg;
+  .card{
+    @extend .card
+  } 
 }
 
 .faq {
@@ -95,15 +98,19 @@
 }
 
 .map {
-  // display: none;
-
   background: $var-primary-bg;
   padding: 0;
-  .container-fluid{
-    padding: 0 0 0 10px;
+
+  .map-area {
     iframe {
-      // display: none;
+      padding: 0;
       height: 40rem;
     }
+  }
+
+  .form-area {
+  
+    @include flexbox(flex , center , center)
+    
   }
 }

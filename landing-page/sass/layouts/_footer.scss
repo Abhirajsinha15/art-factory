@@ -1,0 +1,20 @@
+.footer{
+    padding: px-to-rem(40px 0);
+    .container{
+
+        @include flexbox(flex , space-between , center);
+        .social-media{
+            display:flex;
+            li{
+                background: $var-secondary-bg;
+                padding: 15px 20px ;
+                margin: 0 10px;
+                border-radius: 10px;
+             
+                &:hover{
+                background: $var-teritory-bg
+                }
+            }
+        }
+    }
+}

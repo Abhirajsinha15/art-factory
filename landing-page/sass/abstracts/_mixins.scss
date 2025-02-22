@@ -7,3 +7,10 @@
     text-transform: $textCase;
 
 }
+
+@mixin flexbox($dp ,$jc ,$ai ,$fd:"row"){
+    display: $dp;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}

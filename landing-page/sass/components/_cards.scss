@@ -4,11 +4,19 @@
   .img-area {
     figure {
       background: $var-primary-bg;
-      padding: 20px;
+      padding: px-to-rem(20px);
       border-radius: 50%;
     }
   }
   .text-area {
-    margin: px-to-rem( 25px);
+    margin: px-to-rem(25px);
+  }
+  &:hover {
+    figure {
+      background: $var-teritory-bg;
+    }
+    button {
+      background: $var-teritory-bg;
+    }
   }
 }

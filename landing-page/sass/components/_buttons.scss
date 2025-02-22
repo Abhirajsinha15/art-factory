@@ -1,3 +1,18 @@
+.find-out-btn {
+  @include common-btn(
+    10%,
+    px-to-rem(10px 20px),
+    px-to-rem(25px),
+    $explore-btn-bg,
+    $secondary-text-color,
+    uppercase
+  );
+  &:hover {
+    background: $var-teritory-bg;
+  }
+}
+
+
 .discover-btn {
   @include common-btn(
     30%,
@@ -12,22 +27,16 @@
   }
 }
 
+
 .hero {
   .row {
     .text-area {
-      .find-out-btn {
-        @include common-btn(
-          30%,
-          px-to-rem(10px),
-          px-to-rem(25px),
-          $explore-btn-bg,
-          $secondary-text-color,
-          uppercase
-        );
-        &:hover {
-          background: $var-teritory-bg;
-        }
+      .find-out-btn{
+
+        @extend .find-out-btn;
       }
+      
+
     }
   }
 }
@@ -43,18 +52,20 @@
 }
 .services {
   .card {
-
-    &:hover {
-        figure{
-            background: $var-teritory-bg    
-        }
-        button{
-            background: $var-teritory-bg
-        }
-          }
     button {
       @extend .discover-btn;
     
     }
   }
+}
+
+.map{
+  .row{
+    .form-area{
+      .send{
+      @extend .find-out-btn
+      
+    }
+  }
+}
 }

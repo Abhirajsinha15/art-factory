@@ -1,0 +1,34 @@
+form {
+    width: 100%;
+    padding: px-to-rem(50px); 
+    @include flexbox(flex , center , center , column);
+
+    
+  
+    .input-container {
+      @include flexbox(flex ,flex-start , center );
+      gap: px-to-rem(20px); 
+      width: 100%; 
+      max-width: px-to-rem(600px); 
+      
+    }
+  
+    input {
+      padding: px-to-rem(20px);
+      width: 50%;
+      border: 0;
+      // &::placeholder{
+      //   background: $var-teritory-bg;
+      // }
+    }
+  
+    #message {
+      max-width: px-to-rem(620px);
+      min-width: px-to-rem(300px);
+      height: px-to-rem(150px);
+      margin: px-to-rem(20px 0);
+      width: 77%;
+      border: 0;
+      padding: px-to-rem(20px);
+    }
+  }
