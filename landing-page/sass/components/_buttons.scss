@@ -16,7 +16,7 @@
 .discover-btn {
   @include common-btn(
     30%,
-    px-to-rem(10px),
+    px-to-rem(10px 15px),
     px-to-rem(25px),
     $var-secondary-bg,
     $secondary-text-color,

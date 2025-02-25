@@ -5,7 +5,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
-.navbar-brand:focus {
+.navbar-brand:hover {
   text-decoration: none;
   color: #fff;
 }
@@ -46,6 +46,10 @@
 
 .services .card .text-area {
   text-align: center;
+}
+.services .custom-arrow {
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 .faq .faq-head {
@@ -114,7 +118,7 @@ ul, ol {
 
 .discover-btn, .services .card button, .about .row .text-area button {
   min-width: 30%;
-  padding: 0.625rem;
+  padding: 0.625rem 0.9375rem;
   border-radius: 1.5625rem;
   background: #00A3D4;
   color: #fff;
@@ -126,11 +130,18 @@ ul, ol {
 
 .card, .services .card {
   border-radius: 0;
+  width: 31.25rem;
+  height: 24.6875rem;
+  padding: 1.25rem;
+}
+.card .img-area {
+  margin: 0 auto;
 }
 .card .img-area figure {
   background: #009DD7;
   padding: 1.25rem;
   border-radius: 50%;
+  max-width: 100px;
 }
 .card .text-area {
   margin: 1.5625rem;
@@ -214,10 +225,9 @@ nav .drop-links .sub-nav-link {
 }
 
 .hero {
-  background: url(/landing-page/images/banner-bg.png) 0.625rem -8.75rem no-repeat;
+  background: url(/landing-page/images/banner-bg.png) 0 -8.75rem no-repeat;
   background-size: cover;
   min-height: 40rem;
-  margin: 0 0.5rem 0 0.06rem;
 }
 .hero .container {
   padding: 3rem 0;
@@ -233,7 +243,7 @@ nav .drop-links .sub-nav-link {
 }
 .hero .container .img-area figure {
   position: absolute;
-  top: -5.875rem;
+  top: -2.875rem;
 }
 
 .about {
@@ -338,7 +348,6 @@ nav .drop-links .sub-nav-link {
 
 .navbar {
   --bs-navbar-padding-y: 0;
-  margin: 0.5rem 0.443rem 0 0.688rem;
 }
 .navbar .dropdown:hover .dropdown-menu {
   display: block;
@@ -382,72 +391,41 @@ nav .drop-links .sub-nav-link {
   margin: 0;
 }
 
-.service {
-  position: relative;
-}
-
-.swiper-container {
+.services .container {
   position: relative;
   height: 100%;
-  background: yellowgreen;
-  overflow: hidden;
+  max-width: 96.25rem;
+  padding: 1.25rem;
 }
-
-.swiper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background: yellow;
-  overflow: hidden;
+.services .swiper {
+  width: 87.5rem;
+  height: 25rem;
 }
-
-.swiper-slide {
+.services .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.swiper-slide img {
-  display: block;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-
-.swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: gray;
-  opacity: 0.5;
-}
-.swiper-pagination .swiper-pagination-bullet-active {
-  background-color: black;
-  opacity: 1;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  font-size: 30px;
-  color: #333; /* Change color */
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  background: rgba(0, 0, 0, 0.5);
-}
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.services .swiper-button-next,
+.services .swiper-button-prev {
   display: none;
 }
-
-.swiper-button-prev {
-  left: -40px;
+.services .custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  background: #0088E8;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 50%;
+}
+.services .custom-arrow.right-arrow {
+  right: 0.625rem;
+}
+.services .custom-arrow.left-arrow {
+  left: 0.625rem;
 }/*# sourceMappingURL=style.css.map */
